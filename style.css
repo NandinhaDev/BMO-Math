@@ -143,8 +143,8 @@ body {
     align-content: space-evenly;
     justify-content: space-between;
     gap: 3%;
-    padding-top: 2%;
-    margin-bottom: 1%;
+    padding-top: 1%;
+    row-gap: 1%;
     
     
 
