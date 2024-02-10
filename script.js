@@ -20,6 +20,8 @@ function display(val) {
     return val
 }
 
+
+
 function deleteNumber() {
     const currentValue = result.value;  
     if (currentValue.length > 0) {   

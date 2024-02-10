@@ -17,6 +17,7 @@ body {
     width: 38vw;
     aspect-ratio: 5/8;
     z-index: 0;
+    justify-self: center;
 
 
     
@@ -118,12 +119,11 @@ body {
 
 
 .allButtons{
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     width: 32vw;
     min-width: none;
     min-width: none;
-    height: 38vw;
      position: relative;
      flex: 1;
      justify-items: center;
@@ -135,15 +135,16 @@ body {
 .restOfButtons {
     align-self: center;
     flex-wrap: wrap;
-    width: 37vw;
+    width: 100%;
     min-width: none;
-    height: 33vw;
+    height: 100%;
     display: inline-flex;;
     align-items:center;
     align-content: space-evenly;
     justify-content: space-between;
     gap: 3%;
     padding-top: 2%;
+    margin-bottom: 1%;
     
     
 
@@ -198,13 +199,21 @@ width: 20%;
     background-color: transparent;
     margin-top: 1%;
 }
+#plusContainer {
+    display: inline-flex;
+    border: solid 5px transparent;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    margin-left: 1%;
+}
 
 
 #plus{
     
-    -webkit-text-stroke: 1.5vw rgb(47, 255, 57);
+    -webkit-text-stroke: 1.3vw rgb(47, 255, 57);
     display: inline-block;
-    font-size: 7.9vw;
+    font-size: 6.5vw;
     background-color: transparent;
     color: rgb(47, 255, 57);
     position: absolute;  
@@ -216,9 +225,9 @@ width: 20%;
 #plusBorder {
     display: inline-flex;
     position: absolute;
-    font-size: 8vw;
+    font-size: 6.6vw;
     background-color: transparent;
-    -webkit-text-stroke: 2vw black;
+    -webkit-text-stroke: 1.8vw black;
     justify-content: center;
     flex-grow: 0;
     align-self: center;
@@ -233,13 +242,10 @@ width: 20%;
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 28vw;
-    bottom: -2.2%;
     border: none;
-        
-    
+    align-self: center;
+    justify-self: center;   
 }
-
 .deleteButton{
     width: 5vw;
     aspect-ratio: 1/1;
