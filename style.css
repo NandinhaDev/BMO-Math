@@ -48,6 +48,7 @@ body {
     position: relative;
     margin-top: 2vw;
     z-index: 0;
+    flex-shrink: 0;
 }
 .calculator {
     background-color: rgb(187, 241, 223);
