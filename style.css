@@ -11,54 +11,73 @@ body {
     text-align: center;
     align-items: center;
     flex-direction: column;
-    height: 800px;
-    width: 500px;
     border-radius: 10%;
-    padding: 3%;
+    padding: 3vw;
     border: solid #1c5240 3px;
+    width: 38vw;
+    aspect-ratio: 5/8;
+    z-index: 0;
+
+
     
 }
+.displayBmo{
+    display: inline-flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    position: absolute;
+    justify-self: center;
+    margin-top: 13%;
+    border: solid 5px transparent;
 
+
+
+}
 .face {
     background-color: rgb(187, 241, 223);
-    width: 400px;
-    height: 300px;
-    display: flex;
-    margin-top: 10%;
+    width: 32vw;
+    aspect-ratio: 4/3;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border: solid 3px #1c5240;
     border-radius: 10%;
-
+    position: relative;
+    margin-top: 2vw;
+    z-index: 0;
 }
 .calculator {
-    display: flex;
     background-color: rgb(187, 241, 223);
-    width: 400px;
-    height: 300px;
-    margin-top: 10%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 32vw;
+    aspect-ratio: 4/3.175;
     border: solid 3px #1c5240;
     border-radius: 10%;
     z-index: 1;
-    position:relative;
+    position:absolute;
     left: 50%;
-    bottom: 27.8%;
     transform: translate(-50%, -50%) scale(0);
     color: #000e00;
-    font-size: 36px;
     transition: 200ms ease-in-out;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+
+
+
+
 }
 .calculator.active {
     transform: translate(-50%, -50%) scale(1);
 
 }
-
 .eye {
- width:1em; 
+ width: 1.5vw; 
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: #000e00;
@@ -73,15 +92,15 @@ body {
     
 }
 .smileContainer {
-    height: 1.5em;
+    height: 2vw;
     overflow: hidden;
-    rotate: 180deg;
+    transform: rotate(180deg);
     margin-bottom: 10%;
     margin-top: 5%;
 }
 .smile {
     border: solid 2px #000e00;
-    width: 5em;
+    width: 6vw;
     aspect-ratio:1/1;
     border-radius: 45%;
     opacity: 0.7;
@@ -92,40 +111,61 @@ body {
 .clearDelete{
     display: flex;
     align-self: center;
-    gap: 10px;
+    gap: 10%;
+    margin-top: 5%;
 }
 
 
 .allButtons{
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 500px;
+    width: 32vw;
+    min-width: none;
+    min-width: none;
+    height: 38vw;
      position: relative;
-     bottom: 40%;
      flex: 1;
      justify-items: center;
-     row-gap: 10px;
+     margin-top: 5%;
+     z-index: 0;
+
 
 }
 .restOfButtons {
     align-self: center;
     flex-wrap: wrap;
-    max-width: 400px;
+    width: 37vw;
+    min-width: none;
+    height: 33vw;
+    display: inline-flex;;
+    align-items:center;
+    align-content: space-evenly;
+    justify-content: space-between;
+    gap: 3%;
+    padding-top: 2%;
+    
+    
+
+
+
+
     
 
 }
 button {
-    font-size: 28px;
-    border: solid 3px black;
+    font-size: 2vw;
+    border: solid 0.3vmax black;
 }
 .restOfButtons button {
-    width: 85px;
-    height: 50px;
-    margin: 3% 1.5%;
+aspect-ratio: 3/2;
+width: 20%;
+
+
+    
 
     
 }
+
 
 .operatorButton {
     background-color: rgb(255, 29, 59);
@@ -134,83 +174,95 @@ button {
 }
 .numberButton {
     background-color: rgb(0, 217, 255);
-    color: white}
+    color:black}
 
 
 
 
 
 
-.screen {
-    display: flex;
+.screen { 
     background-color: transparent;
-    border: none;
-    font-size: 30px;
-    width: 300px;
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: "Orbitron", sans-serif;
+    min-width: none;
+    border: solid transparent;
+    width: 60%;
+    text-align: center;
+
+    
+    
 }
+.invisibleButton {
+    border: none;
+    background-color: transparent;
+    margin-top: 1%;
+}
+
 
 #plus{
     
-    -webkit-text-stroke: 15px rgb(47, 255, 57);
+    -webkit-text-stroke: 1.5vw rgb(47, 255, 57);
     display: inline-block;
-    font-size: 130px;
-    margin-bottom: 20px;
+    font-size: 7.9vw;
     background-color: transparent;
     color: rgb(47, 255, 57);
-    position: absolute;
-    top: 65%;
-    right: 2%;
-    
-
+    position: absolute;  
+    align-self: center; 
+    justify-self: center;
 }
 
-.emptyButton{
-    background-color: transparent;
-    border: none;
-}
+
 #plusBorder {
-    display: inline-block;
+    display: inline-flex;
     position: absolute;
-    font-size: 130px;
-    margin-bottom: 20px;
+    font-size: 8vw;
     background-color: transparent;
-    position: absolute;
-    top: 65%;
-    right: 2%;
-    -webkit-text-stroke: 20px black
+    -webkit-text-stroke: 2vw black;
+    justify-content: center;
+    flex-grow: 0;
+    align-self: center;
+    justify-self: center;
 }
 #plusButton {
-    position: absolute;
     background-color: transparent;
     border-radius: 50%;
-    width: 30px;
-    top: 76%;
-    right: 8.2%;
-    font-size: 38px;
     z-index: 1;
+    display: flex;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 28vw;
+    bottom: -2.2%;
     border: none;
+        
     
 }
 
 .deleteButton{
-    width: 65px;
+    width: 5vw;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 50%;
     background-color:rgb(3, 46, 138);
     color: aliceblue;
-    margin-left: 20px;
+    margin-left: 5%;
+    padding: 0.1vmax;
     
     
 }
 .clearButton {
-    width: 320px;
-    height: 45px;
-    font-size: 25px;
+    width: 30vw;
+    height: 4vw;
+    font-size: 70%;
     align-self: center;
     background-color: #307e64;
     color: aliceblue;
+    min-width: none;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .equalButton {
@@ -222,4 +274,10 @@ button {
     border-radius: 5px;
     background-color: rgb(9, 68, 230);
     color: aliceblue;   
+}
+#plusButton p {
+    color: white;
+    z-index: 1;
+    font-size: 3vw;
+    
 }

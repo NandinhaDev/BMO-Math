@@ -7,44 +7,44 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+
 <div class="mainContainer">
-    <div class="displayContainer">
-        <div class= "face">
+   <div class="displayBmo">
+    <div class="calculator">
+        <input type="text" id="result" class="screen">
+    </div>
+   </div>
+ <div class= "face">
+ 
             <div class="eyesContainer">
             <div class="eye leftEye"></div>
             <div class="eye rightEye"></div>
             </div>
             <div class="smileContainer">
             <div class="smile"></div>
-            </div>
-        
-        </div>
-      
-        <div class="calculator">
-        <input type="text" id="result" class="screen">
-        </div>
+            </div>  
+ </div>
 
-    </div>
-        
+
+
         <div class=allButtons>
         <div class="clearDelete">
-            <button class="clearButton">Clear</button>
-            <button class="deleteButton">Del</button>
+            <button class="clearButton" onclick="clearScreen()">Clear</button>
+            <button class="deleteButton" onclick="deleteNumber()">Del</button>
         </div>
         <div class="restOfButtons">
          <button  class="numberButton" value="7" onclick="display('7')">7</button>  
          <button class="numberButton" value="8" onclick="display('8')">8</button> 
          <button class="numberButton" value="9" onclick="display('9')">9</button>
-         <button class="operatorButton" value="/" onclick="display('÷')">÷</button>
+         <button class="operatorButton" id="divideButton" value="/" onclick="display('÷')">÷</button>
          <button class="numberButton" value="4" onclick="display('4')">4</button>
          <button class="numberButton" value="5" onclick="display('5')">5</button>
          <button class="numberButton" value="6" onclick="display('6')">6</button>
-         <button class="operatorButton" value="*" onclick="display('x')">x</button>
+         <button class="operatorButton" id="multiplicateButton" value="*" onclick="display('x')">x</button>
          <button class="numberButton" value="1" onclick="display('1')">1</button>
          <button class="numberButton" value="2" onclick="display('2')">2</button>
          <button class="numberButton" value="3" onclick="display('3')">3</button>
@@ -52,16 +52,21 @@
          <button class="pointButton" value="." onclick="display('.')">.</button>
          <button class="numberButton" value="0" onclick="display('0')">0</button>
          <button class="equalButton" value="=" onclick="solve()">=</button>
-         <div id="plusBorder">+</div>
+         <button class="invisibleButton"></button>
+         <button class="operatorButton" id="plusButton" value="+" onclick="display('+')">
+         <p>+</p>
+         <div id="plusBorder">+
          <div id="plus">+</div>
-         <button class="emptyButton"></button>
-         <button class="operatorButton" id="plusButton" value="+">+</button>
+         </div>
+        </button>
+        
+    
         </div>
         </div>
 
 
 
- </div>
+</div>
  <script src="script.js"></script>
 </body>
 </html>
